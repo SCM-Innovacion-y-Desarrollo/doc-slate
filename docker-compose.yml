@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+
+  slate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: us.gcr.io/mypaltime-dev/doc-slate_v20220428:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"   # number of files or file count
+        max-size: "10m" # file size
